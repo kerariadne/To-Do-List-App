@@ -14,7 +14,7 @@ This is a To-Do List application built with Angular for the frontend, ASP.NET fo
 
 ## Frontend
 
-The frontend is built with Angular. The main component is the `TaskListComponent`, which displays the list of tasks. If there are no tasks, it displays a message in Georgian saying "Unfortunately, no tasks have been added yet." There is also a form to add new tasks.
+The frontend is built with Angular. The main component is the `TaskListComponent`, which displays the list of tasks.
 
 ## Backend
 
