@@ -1,0 +1,151 @@
+<div class="login-form ">
+    <div class="card ">
+      <!-- Card Header -->
+      <div class="card-header">
+        <p>To-Do List</p>
+      </div>
+  
+      <div class="card-body">
+        <!-- Show message if there is no task -->
+        <div class="alert text-center" *ngIf="tasks.length <= 0">
+          <h5>შეტყობინება!</h5>
+          <p style="font-weight: 500;">სამწუხაროდ დამატებული დავალებები ჯერ არ მოიძებნა.</p>
+        </div>
+  
+        <!-- Form to add/edit/delete tasks -->
+        <form class="mt-5 forBox"  (ngSubmit)="addTask()" #form="ngForm"  [ngStyle]="{'box-shadow': tasks.length === 0 ? '' : 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px'}"  >
+          <h6 *ngIf="tasks.length == 0" class="Adding text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" stroke="rgba(56,61,90,255)" stroke-width="1px" width="20" height="20"
+              fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0" />
+            </svg> ახალი დავალების დამატება
+          </h6>
+  
+          <div  class="row justify-content-center" [ngStyle]="{'margin-left': tasks.length === 0 ? '60px' : '0'}">
+            <!-- Input field for task name -->
+            <div *ngIf="tasks.length > 0" class="col">
+              <label for=""></label>
+              <h6 *ngIf="!isEditButtonClicked" class="Adding text-center"><svg xmlns="http://www.w3.org/2000/svg"
+                  stroke="rgba(56,61,90,255)" stroke-width="1px" color="rgba(56,61,90,255)" width="20" height="20"
+                  fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0" />
+                </svg> ახალი დავალების დამატება</h6>
+              <h6 *ngIf="isEditButtonClicked" class="Adding text-center"><svg xmlns="http://www.w3.org/2000/svg"
+                  stroke="rgba(56,61,90,255)" stroke-width="1px" width="16" height="16" fill="currentColor"
+                  class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+                </svg> დავალების რედაქტირება</h6>
+            </div>
+  
+            <div class="col form-group">
+              <label for="taskName" *ngIf="!isEditButtonClicked"> შეიყვანეთ დასახელება</label>
+              <label for="taskName" *ngIf="isEditButtonClicked"> შეცვალეთ დასახელება</label>
+              <input type="text" class="form-control inputName" id="taskName" name="taskName" [(ngModel)]="newTask.name"
+                required>
+            </div>
+            <!-- Dropdown for task status -->
+            <div class="col form-group">
+              <label for="taskStatus"></label>
+              <div class="select-wrapper">
+                <select class="form-select" aria-label="Default select example" id="taskStatus" name="taskStatus"
+                  [(ngModel)]="newTask.status" required>
+                  <option value='' selected>აირჩიეთ დავალების სტატუსი </option>
+                  <option style="color: rgba(250,225,162,255)" value="მიმდინარე სტატუსი">მიმდინარე სტატუსი</option>
+                  <option style="color: rgba(179,230,217,255)" value="დასრულებული სტატუსი">დასრულებული სტატუსი</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Button to add/edit task -->
+            <div class="col d-flex justify-content-center align-items-center">
+              <button *ngIf="!isEditButtonClicked" type="submit" class="btn btn-primary mt-4 addButton"> <svg
+                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" stroke="white" stroke-width="1px"
+                  fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg> დამატება</button>
+              <a (click)="editTask(newTask)" *ngIf="isEditButtonClicked" type="submit"
+                class="btn btn-primary mt-4 editButtonClick"><svg xmlns="http://www.w3.org/2000/svg" stroke="white"
+                  stroke-width="1px" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+                </svg> რედაქტირება</a>
+            </div>
+          </div>
+        </form>
+  
+  
+        <!-- Display the list of tasks -->
+        <div *ngIf="tasks.length > 0">
+          <table class="table first">
+            <thead>
+              <tr>
+                <th class="col-6"><svg xmlns="http://www.w3.org/2000/svg" stroke="rgba(250,225,162,255)"
+                    stroke-width="1px" width="18" height="18" fill="currentColor" class="bi bi-chevron-double-right"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                    <path fill-rule="evenodd"
+                      d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                  </svg> მიმდინარე დავალებები</th>
+                <th class="col-4">სტატუსი</th>
+                <th class="col-1"></th>
+                <th class="col-1"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="grayRow" *ngFor="let task of tasks">
+                <ng-container *ngIf="task.status === 'მიმდინარე სტატუსი' ">
+                  <td style="color:rgba(56,61,90,255)">{{task.name}}</td>
+                  <td style="color:rgba(250,225,162,255)">მიმდინარე</td>
+                  <td> <button type="button" class="btn editButton edit1" (click)="getTask(task)"><svg
+                        xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-width="1px" width="16" height="16"
+                        fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path
+                          d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+                      </svg></button></td>
+                  <td><button type="submit" (click)="deleteTask(task.id)" class="btn deleteButton">წაშლა</button></td>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+  
+          <table class="table second">
+            <thead>
+              <tr>
+                <th class="col-6"><svg xmlns="http://www.w3.org/2000/svg" stroke="rgba(179,230,217,255)"
+                    stroke-width="1px" width="18" height="18" fill="currentColor" class="bi bi-check2-all"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0" />
+                    <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708" />
+                  </svg> დასრულებული დავალებები</th>
+                <th class="col-4">სტატუსი</th>
+                <th class="col-1"></th>
+                <th class="col-1"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let task of tasks" class="mb-5">
+                <ng-container *ngIf="task.status === 'დასრულებული სტატუსი'">
+                  <td style="color:rgba(56,61,90,255)">{{task.name}}</td>
+                  <td style="color: rgba(179,230,217,255)">დასრულებული</td>
+                  <td> <button type="button" class="btn editButton edit2" (click)="getTask(task)"><svg
+                        xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-width="1px" width="16" height="16"
+                        fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path
+                          d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+                      </svg></button></td>
+                  <td><button type="submit" (click)="deleteTask(task.id)" class="btn deleteButton">წაშლა</button></td>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

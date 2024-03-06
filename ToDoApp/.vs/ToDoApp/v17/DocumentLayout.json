@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|c:\\users\\kerariadne\\desktop\\project\\todoapp\\todoapp\\migrations\\20240306162423_first migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\migrations\\20240306162423_first migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|c:\\users\\kerariadne\\desktop\\project\\todoapp\\todoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|c:\\users\\kerariadne\\desktop\\project\\todoapp\\todoapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|c:\\users\\kerariadne\\desktop\\project\\todoapp\\todoapp\\data\\tasksdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\data\\tasksdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|c:\\users\\kerariadne\\desktop\\project\\todoapp\\todoapp\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|c:\\users\\kerariadne\\desktop\\project\\todoapp\\todoapp\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CEE02C6-72A2-40EE-96AA-2C8BF9FEAC46}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240306162423_First Migration.cs",
+              "DocumentMoniker": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Migrations\\20240306162423_First Migration.cs",
+              "RelativeDocumentMoniker": "ToDoApp\\Migrations\\20240306162423_First Migration.cs",
+              "ToolTip": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Migrations\\20240306162423_First Migration.cs",
+              "RelativeToolTip": "ToDoApp\\Migrations\\20240306162423_First Migration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T16:24:28.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\appsettings.json",
+              "RelativeDocumentMoniker": "ToDoApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\appsettings.json",
+              "RelativeToolTip": "ToDoApp\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-06T16:20:45.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "ToDoApp\\Controllers\\TasksController.cs",
+              "ToolTip": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "ToDoApp\\Controllers\\TasksController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T16:20:18.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Models\\TaskModel.cs",
+              "RelativeDocumentMoniker": "ToDoApp\\Models\\TaskModel.cs",
+              "ToolTip": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Models\\TaskModel.cs",
+              "RelativeToolTip": "ToDoApp\\Models\\TaskModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T16:19:30.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TasksDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Data\\TasksDbContext.cs",
+              "RelativeDocumentMoniker": "ToDoApp\\Data\\TasksDbContext.cs",
+              "ToolTip": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Data\\TasksDbContext.cs",
+              "RelativeToolTip": "ToDoApp\\Data\\TasksDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T16:18:36.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Program.cs",
+              "RelativeDocumentMoniker": "ToDoApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Kerariadne\\Desktop\\Project\\ToDoApp\\ToDoApp\\Program.cs",
+              "RelativeToolTip": "ToDoApp\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T16:16:24.518Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

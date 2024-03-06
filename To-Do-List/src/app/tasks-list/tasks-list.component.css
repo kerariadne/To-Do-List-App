@@ -1,0 +1,231 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans Georgian";
+}
+
+/***************** tables  ****************/ 
+
+th {
+    color: rgba(56, 61, 90, 255);
+}
+
+thead {
+    font-weight: 800;
+}
+
+.second {
+    margin-bottom: 30px;
+}
+ 
+.table td {
+    background-color: rgba(192, 191, 191, 0.137);
+    font-weight: 500;
+}
+
+tr {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+
+/****************** buttons ******************/
+
+.edit2 {
+    border: 0;
+    
+}
+
+.edit2:active {
+    background-color: rgba(179, 230, 217, 255);
+    border: 0;
+}
+
+
+
+/************* Form ****************/
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    font-family: "Noto Sans Georgian";
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    transition: 0.25s all ease;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.select-wrapper select {
+    outline: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 40px;
+    background: #ffffff;
+    background-image: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.forBox {
+    padding-bottom: 20px;
+}
+
+.inputName {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 40px;
+    background: #ffffff;
+    background-image: none;
+    cursor: pointer;
+}
+
+input:focus{
+    border: 1px solid rgba(56, 61, 90, 255);;
+}
+
+form label {
+    font-weight: 500;
+    color: rgba(56, 61, 90, 255);
+}
+
+select {
+    font-weight: 600;
+    color: rgba(56, 61, 90, 255);
+}
+
+option {
+    font-weight: 600;
+}
+
+option:checked {
+    background-color: rgba(56, 61, 90, 255);
+    color: white;
+    border: 1px solid rgba(56, 61, 90, 255);
+}
+
+select:focus{
+    border: 1px solid rgba(56, 61, 90, 255);
+}
+
+/*************** alert **************/ 
+
+.alert {
+    background-color: rgba(128, 128, 128, 0.089);
+    border-radius: 0;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.alert h5 {
+    color: rgb(252, 133, 153);
+    letter-spacing: 2px;
+}
+
+.alert p {
+    color: rgba(56, 61, 90, 255);
+}
+
+.addButton {
+    background-color: rgba(56, 61, 90, 255);
+    border-radius: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 0;
+    font-weight: 500;
+}
+
+.addButton:active {
+    background-color: rgba(40, 50, 80, 255);
+    border: 0;
+}
+
+.editButtonClick {
+    background-color: rgba(56, 61, 90, 255);
+    border-radius: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 0;
+    font-weight: 500;
+}
+
+.editButtonClick:active {
+    background-color: rgba(50, 60, 80, 255);
+    border: 0;
+}
+
+
+/***************** card ****************/
+
+.card-body {
+    padding: 0;
+}
+
+.card-header {
+    border-radius: 30px 30px 0 0;
+    height: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: rgba(56, 61, 90, 255);
+
+}
+
+.card-header p {
+    padding-top: 15px;
+    color: whitesmoke;
+}
+
+.card {
+    min-height: 100vh;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-width: 100%;
+}
+
+.login-form {
+    justify-content: center;
+    padding: 2%;
+}
+
+.edit1 {
+    border: 0;
+}
+
+.edit1:active {
+    background-color: rgba(250, 225, 162, 255);
+    border: 0;
+}
+
+.editButton {
+    background-color: rgba(56, 61, 90, 255);
+    border-radius: 50%;
+    border: solid black 1px;
+}
+
+.editButton svg {
+    color: white;
+}
+
+.deleteButton {
+    background-color: rgba(255, 173, 173, 255);
+    font-weight: 500;
+    color: white;
+    border-radius: 40px;
+    border: 0;
+}
+
+.deleteButton:active {
+    background-color:  rgba(230, 150, 170, 255);
+    border: 0;
+    color:white;
+}
